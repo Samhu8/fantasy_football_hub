@@ -1,0 +1,57 @@
+body {
+    margin: 0px auto;
+}
+
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container, img{
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.2;
+}
+
+.overlay_text {
+    position: absolute;
+    width: 1000px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.reg_log{
+    display: flex;
+    justify-content: space-evenly;
+}
+h1 {
+    color: rgb(0, 89, 255);
+    text-shadow: 2px 2px black;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+label{
+    width: 150px;
+    display: inline-block;
+    text-align: right;
+    color: rgb(23, 152, 233);
+    font-weight: bolder;
+}
+.btn{
+    width: 120px;
+    align-items: end;
+}
+h3{
+    color: rgb(23, 152, 233);
+}
+input{
+    background-color: rgb(230, 226, 226);
+}

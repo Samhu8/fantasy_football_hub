@@ -1,0 +1,63 @@
+
+body{
+    margin: 0px auto;
+    padding: 0px;
+}
+
+
+/* ************ IMAGE AND TEXT ************ */
+
+.container{
+    position: relative;
+}
+.new_player{
+    position: absolute;
+    top: 10%;
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+img{
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+}
+
+
+/* ************ ADJUST INFORMATION ************ */
+label{
+    width: 150px;
+    display: inline-block;
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.info {
+    border: 2px auto black;
+    border-radius: 25px;
+    box-shadow: 10px 5px 5px black;
+    background-color: rgb(144, 156, 168);
+    width: 450px;
+    margin: 0px auto;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 50px;
+}
+textarea{
+    vertical-align: top;
+    margin-top: 4px;
+}
+.btns{
+    text-align: end;
+    padding-top: 10px;
+    padding-right: 62px;
+}
+#btn {
+    text-decoration: none;
+}
+
+
+h2, h3{
+    text-decoration: underline;
+}

@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            align-items: center;
+            margin: 0px auto;
+        }
+        .week-none {
+            display: none;
+        }
+        .matchups {
+            width: 250px;
+            align-items: center;
+            border: 2px solid black;
+            margin: 0px auto;
+
+        }
+        h2{
+            text-decoration: underline;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>NFL GAMES</h1>
+    <a href="/login">Back to Dashboard</a><br><br>
+
+    <select onchange="showWeek(this)" id="show_week">
+        <option value="all">All</option>
+        <option value="week1">Show Week 1</option>
+        <option value="week2">Show Week 2</option>
+        <option value="week3">Show Week 3</option>
+        <option value="week4">Show Week 4</option>
+        <option value="week5">Show Week 5</option>
+        <option value="week6">Show Week 6</option>
+        <option value="week7">Show Week 7</option>
+        <option value="week8">Show Week 8</option>
+        <option value="week9">Show Week 9</option>
+        <option value="week10">Show Week 10</option>
+    </select>
+
+    <div class="all_weeks">
+        <div class="week" id="week1">
+            <h2>Week 1</h2>
+            <div class="matchups">
+                <h4>Lions: 21</h4>
+                <p>VS</p>
+                <h4>Chiefs: 20</h4>
+            </div>
+            <div class="matchups">
+                <h4>Bengals: 3</h4>
+                <p>VS</p>
+                <h4>Browns: 24</h4>
+            </div>
+            <div class="matchups">
+                <h4>Texans: 9</h4>
+                <p>VS</p>
+                <h4>Ravens: 25</h4>
+            </div><div class="matchups">
+                <h4>Buccaneers: 20</h4>
+                <p>VS</p>
+                <h4>Vickings: 17</h4>
+            </div><div class="matchups">
+                <h4>Panthers: 10</h4>
+                <p>VS</p>
+                <h4>Falcons: 24</h4>
+            </div><div class="matchups">
+                <h4>Cardinals: 16</h4>
+                <p>VS</p>
+                <h4>Commanders: 20</h4>
+            </div><div class="matchups">
+                <h4>Jaguars: 31</h4>
+                <p>VS</p>
+                <h4>Colts: 21</h4>
+            </div><div class="matchups">
+                <h4>49ers: 30</h4>
+                <p>VS</p>
+                <h4>Steelers: 7</h4>
+            </div><div class="matchups">
+                <h4>Titans: 15</h4>
+                <p>VS</p>
+                <h4>Saints: 16</h4>
+            </div><div class="matchups">
+                <h4>Raiders: 17</h4>
+                <p>VS</p>
+                <h4>Broncos: 16</h4>
+            </div><div class="matchups">
+                <h4>Eagles: 25</h4>
+                <p>VS</p>
+                <h4>Patriots: 20</h4>
+            </div><div class="matchups">
+                <h4>Rams: 30</h4>
+                <p>VS</p>
+                <h4>Seahawks: 13</h4>
+            </div><div class="matchups">
+                <h4>Dolphins: 36</h4>
+                <p>VS</p>
+                <h4>Chargers: 34</h4>
+            </div><div class="matchups">
+                <h4>Packers: 38</h4>
+                <p>VS</p>
+                <h4>Bears: 20</h4>
+            </div><div class="matchups">
+                <h4>Cowboys: 40</h4>
+                <p>VS</p>
+                <h4>Giants: 0</h4>
+            </div><div class="matchups">
+                <h4>Bills: 16</h4>
+                <p>VS</p>
+                <h4>Jets: 22</h4>
+            </div>
+        </div>
+
+        <div class="week" id="week2">
+            <h2>Week 2</h2>
+            <div class="matchups">
+                <h4>Vickings: 28</h4>
+                <p>VS</p>
+                <h4>Eagles: 34</h4>
+            </div>
+            <div class="matchups">
+                <h4>Seahawks: 37</h4>
+                <p>VS</p>
+                <h4>Lions: 31</h4>
+            </div>
+            <div class="matchups">
+                <h4>Colts: 31</h4>
+                <p>VS</p>
+                <h4>Texans: 20</h4>
+            </div>
+            <div class="matchups">
+                <h4>Bears: 17</h4>
+                <p>VS</p>
+                <h4>Buccaneers: 27</h4>
+            </div>
+            <div class="matchups">
+                <h4>Chiefs: 17</h4>
+                <p>VS</p>
+                <h4>Jaguars: 9</h4>
+            </div>
+            <div class="matchups">
+                <h4>Packers: 24</h4>
+                <p>VS</p>
+                <h4>Falcons: 25</h4>
+            </div>
+            <div class="matchups">
+                <h4>Raiders: 10</h4>
+                <p>VS</p>
+                <h4>Bills: 38</h4>
+            </div>
+            <div class="matchups">
+                <h4>Chargers: 24</h4>
+                <p>VS</p>
+                <h4>Titans: 27</h4>
+            </div>
+            <div class="matchups">
+                <h4>Ravnes: 27</h4>
+                <p>VS</p>
+                <h4>Bengals: 24</h4>
+            </div>
+            <div class="matchups">
+                <h4>49ers: 27</h4>
+                <p>VS</p>
+                <h4>Rams: 23</h4>
+            </div>
+            <div class="matchups">
+                <h4>Giants: 31</h4>
+                <p>VS</p>
+                <h4>Cardinals: 28</h4>
+            </div>
+            <div class="matchups">
+                <h4>Jets: 10</h4>
+                <p>VS</p>
+                <h4>Cowboys: 30</h4>
+            </div>
+            <div class="matchups">
+                <h4>Commanders: 35</h4>
+                <p>VS</p>
+                <h4>Broncos: 33</h4>
+            </div>
+            <div class="matchups">
+                <h4>Dolphins: 24</h4>
+                <p>VS</p>
+                <h4>Patriots: 17</h4>
+            </div>
+            <div class="matchups">
+                <h4>Saints: 20</h4>
+                <p>VS</p>
+                <h4>Panthers: 17</h4>
+            </div>
+            <div class="matchups">
+                <h4>Browns: 22</h4>
+                <p>VS</p>
+                <h4>Steelers: 26</h4>
+            </div>
+        </div>
+
+        <div class="week" id="week3">
+            <h2>Week 3</h2>
+            <div class="matchups">
+                <h4>Giants: 12</h4>
+                <p>VS</p>
+                <h4>49ers: 30</h4>
+            </div>
+            <div class="matchups">
+                <h4>Falcons: 6</h4>
+                <p>VS</p>
+                <h4>Lions: 20</h4>
+            </div>
+            <div class="matchups">
+                <h4>Chargers: 28</h4>
+                <p>VS</p>
+                <h4>Vickings: 24</h4>
+            </div>
+            <div class="matchups">
+                <h4>Saints: 17</h4>
+                <p>VS</p>
+                <h4>Packers: 18</h4>
+            </div>
+            <div class="matchups">
+                <h4>Texans: 37</h4>
+                <p>VS</p>
+                <h4>Jaguars: 17</h4>
+            </div>
+            <div class="matchups">
+                <h4>Broncos: 20</h4>
+                <p>VS</p>
+                <h4>Dolphins: 70</h4>
+            </div>
+            <div class="matchups">
+                <h4>Titans: 3</h4>
+                <p>VS</p>
+                <h4>Browns: 27</h4>
+            </div>
+            <div class="matchups">
+                <h4>Bills: 37</h4>
+                <p>VS</p>
+                <h4>Commanders: 3</h4>
+            </div>
+            <div class="matchups">
+                <h4>Colts: 22</h4>
+                <p>VS</p>
+                <h4>Ravens: 19</h4>
+            </div>
+            <div class="matchups">
+                <h4>Patriots: 15</h4>
+                <p>VS</p>
+                <h4>Jets: 10</h4>
+            </div>
+            <div class="matchups">
+                <h4>Panthers: 27</h4>
+                <p>VS</p>
+                <h4>Seahawks: 37</h4>
+            </div>
+            <div class="matchups">
+                <h4>Bears: 10</h4>
+                <p>VS</p>
+                <h4>Chiefs: 41</h4>
+            </div>
+            <div class="matchups">
+                <h4>Cowboys: 16</h4>
+                <p>VS</p>
+                <h4>Cardinals: 28</h4>
+            </div>
+            <div class="matchups">
+                <h4>Steelers: 23</h4>
+                <p>VS</p>
+                <h4>Raiders: 18</h4>
+            </div>
+            <div class="matchups">
+                <h4>Eagles: 25</h4>
+                <p>VS</p>
+                <h4>Buccaneers: 11</h4>
+            </div>
+            <div class="matchups">
+                <h4>Rams: 16</h4>
+                <p>VS</p>
+                <h4>Bengals: 19</h4>
+            </div>
+        </div>
+
+        <div class="week" id="week4">
+            <h2>Week 4</h2>
+            <div class="matchups">
+                <h4>Lions: 34</h4>
+                <p>VS</p>
+                <h4>Packers: 20</h4>
+            </div>
+            <div class="matchups">
+                <h4>Falcons: 7</h4>
+                <p>VS</p>
+                <h4>Jaguars: 23</h4>
+            </div>
+            <div class="matchups">
+                <h4>Rams: 29</h4>
+                <p>VS</p>
+                <h4>Colts: 23</h4>
+            </div>
+            <div class="matchups">
+                <h4>Ravens: 28</h4>
+                <p>VS</p>
+                <h4>Browns: 3</h4>
+            </div>
+            <div class="matchups">
+                <h4>Vickings: 21</h4>
+                <p>VS</p>
+                <h4>Panthers: 13</h4>
+            </div>
+            <div class="matchups">
+                <h4>Bengals: 3</h4>
+                <p>VS</p>
+                <h4>Titans: 27</h4>
+            </div>
+            <div class="matchups">
+                <h4>Buccaneers: 26</h4>
+                <p>VS</p>
+                <h4>Saints: 9</h4>
+            </div>
+            <div class="matchups">
+                <h4>Dolphins: 20</h4>
+                <p>VS</p>
+                <h4>Bills: 48</h4>
+            </div>
+            <div class="matchups">
+                <h4>Broncos: 31</h4>
+                <p>VS</p>
+                <h4>Bears: 28</h4>
+            </div>
+            <div class="matchups">
+                <h4>Commanders: 31</h4>
+                <p>VS</p>
+                <h4>Eagles: 34</h4>
+            </div>
+            <div class="matchups">
+                <h4>Steelers: 6</h4>
+                <p>VS</p>
+                <h4>Texans: 30</h4>
+            </div>
+            <div class="matchups">
+                <h4>Raiders: 17</h4>
+                <p>VS</p>
+                <h4>Chargers: 24</h4>
+            </div>
+            <div class="matchups">
+                <h4>Cardinals: 16</h4>
+                <p>VS</p>
+                <h4>49ers: 35</h4>
+            </div>
+            <div class="matchups">
+                <h4>Patriots: 3</h4>
+                <p>VS</p>
+                <h4>Cowboys: 38</h4>
+            </div>
+            <div class="matchups">
+                <h4>Chiefs: 23</h4>
+                <p>VS</p>
+                <h4>Jets: 20</h4>
+            </div>
+            <div class="matchups">
+                <h4>Seahawks: 24</h4>
+                <p>VS</p>
+                <h4>Giants: 3</h4>
+            </div>
+        </div>
+
+        <div class="week" id="week5">
+            <h2>Week 5</h2>
+            <div class="matchups">
+                <h4>Bears: 40</h4>
+                <p>VS</p>
+                <h4>Commanders: 20</h4>
+            </div>
+            <div class="matchups">
+                <h4>Jaguars: 25</h4>
+                <p>VS</p>
+                <h4>Bills: 20</h4>
+            </div>
+            <div class="matchups">
+                <h4>Saints: 34</h4>
+                <p>VS</p>
+                <h4>Patriots: 0</h4>
+            </div>
+            <div class="matchups">
+                <h4>Titans: 16</h4>
+                <p>VS</p>
+                <h4>Colts: 23</h4>
+            </div>
+            <div class="matchups">
+                <h4>Ravens: 10</h4>
+                <p>VS</p>
+                <h4>Steelers: 17</h4>
+            </div>
+            <div class="matchups">
+                <h4>Panthers: 24</h4>
+                <p>VS</p>
+                <h4>Lions: 42</h4>
+            </div>
+            <div class="matchups">
+                <h4>Texans: 19</h4>
+                <p>VS</p>
+                <h4>Falcons: 21</h4>
+            </div>
+            <div class="matchups">
+                <h4>Giants: 16</h4>
+                <p>VS</p>
+                <h4>Dolphins: 31</h4>
+            </div>
+            <div class="matchups">
+                <h4>Eagles: 23</h4>
+                <p>VS</p>
+                <h4>Rams: 14</h4>
+            </div>
+            <div class="matchups">
+                <h4>Bengals: 34</h4>
+                <p>VS</p>
+                <h4>Cardinals: 20</h4>
+            </div>
+            <div class="matchups">
+                <h4>Jets: 31</h4>
+                <p>VS</p>
+                <h4>Broncos: 21</h4>
+            </div>
+            <div class="matchups">
+                <h4>Chiefs: 27</h4>
+                <p>VS</p>
+                <h4>Vickings: 20</h4>
+            </div>
+            <div class="matchups">
+                <h4>Cowboys: 10</h4>
+                <p>VS</p>
+                <h4>49ers: 42</h4>
+            </div>
+            <div class="matchups">
+                <h4>Packers: 13</h4>
+                <p>VS</p>
+                <h4>Raiders: 17</h4>
+            </div>
+        </div>
+
+        <div class="week" id="week6">
+            <h2>Week 6</h2>
+            <div class="matchups">
+                <h4>Broncos: 8</h4>
+                <p>VS</p>
+                <h4>Chiefs: 19</h4>
+            </div>
+            <div class="matchups">
+                <h4>Ravens: 24</h4>
+                <p>VS</p>
+                <h4>Titans: 16</h4>
+            </div>
+            <div class="matchups">
+                <h4>Panthers: 21</h4>
+                <p>VS</p>
+                <h4>Dolphins: 42</h4>
+            </div>
+            <div class="matchups">
+                <h4>Saints: 13</h4>
+                <p>VS</p>
+                <h4>Texans: 20</h4>
+            </div>
+            <div class="matchups">
+                <h4>Commanders: 24</h4>
+                <p>VS</p>
+                <h4>Falcons: 16</h4>
+            </div>
+            <div class="matchups">
+                <h4>Colts: 20</h4>
+                <p>VS</p>
+                <h4>Jaguars: 37</h4>
+            </div>
+            <div class="matchups">
+                <h4>Seahawks: 13</h4>
+                <p>VS</p>
+                <h4>Bengals: 17</h4>
+            </div>
+            <div class="matchups">
+                <h4>Vikings: 19</h4>
+                <p>VS</p>
+                <h4>Bears: 13</h4>
+            </div>
+            <div class="matchups">
+                <h4>49ers: 17</h4>
+                <p>VS</p>
+                <h4>Browns: 19</h4>
+            </div>
+            <div class="matchups">
+                <h4>Patriots: 17</h4>
+                <p>VS</p>
+                <h4>Raiders: 21</h4>
+            </div>
+            <div class="matchups">
+                <h4>Lions: 20</h4>
+                <p>VS</p>
+                <h4>Buccaneers: 6</h4>
+            </div>
+            <div class="matchups">
+                <h4>Cardinals: 9</h4>
+                <p>VS</p>
+                <h4>Rams: 26</h4>
+            </div>
+            <div class="matchups">
+                <h4>Eagles: 14</h4>
+                <p>VS</p>
+                <h4>Jets: 20</h4>
+            </div>
+            <div class="matchups">
+                <h4>Giants: 9</h4>
+                <p>VS</p>
+                <h4>Bills: 14</h4>
+            </div>
+            <div class="matchups">
+                <h4>Cowboys: 20</h4>
+                <p>VS</p>
+                <h4>Chargers: 17</h4>
+            </div>
+        </div>
+
+        <div class="week" id="week7">
+            <h2>Week 7</h2>
+            <div class="matchups">
+                <h4>Jaguars: 31</h4>
+                <p>VS</p>
+                <h4>Saints: 24</h4>
+            </div>
+            <div class="matchups">
+                <h4>Falcons: 16</h4>
+                <p>VS</p>
+                <h4>Buccaneers: 13</h4>
+            </div>
+            <div class="matchups">
+                <h4>Raiders: 12</h4>
+                <p>VS</p>
+                <h4>Bears: 30</h4>
+            </div>
+            <div class="matchups">
+                <h4>Browns: 39</h4>
+                <p>VS</p>
+                <h4>Colts: 38</h4>
+            </div>
+            <div class="matchups">
+                <h4>Commanders: 7</h4>
+                <p>VS</p>
+                <h4>Giants: 14</h4>
+            </div>
+            <div class="matchups">
+                <h4>Lions: 6</h4>
+                <p>VS</p>
+                <h4>Ravens: 38</h4>
+            </div>
+            <div class="matchups">
+                <h4>Bills: 25</h4>
+                <p>VS</p>
+                <h4>Patriots: 29</h4>
+            </div>
+            <div class="matchups">
+                <h4>Cardinals: 10</h4>
+                <p>VS</p>
+                <h4>Seahawks: 20</h4>
+            </div>
+            <div class="matchups">
+                <h4>Steelers: 24</h4>
+                <p>VS</p>
+                <h4>Rams: 17</h4>
+            </div>
+            <div class="matchups">
+                <h4>Chargers: 17</h4>
+                <p>VS</p>
+                <h4>Chiefs: 31</h4>
+            </div>
+            <div class="matchups">
+                <h4>Packers: 17</h4>
+                <p>VS</p>
+                <h4>Broncos: 19</h4>
+            </div>
+            <div class="matchups">
+                <h4>Dolphins: 17</h4>
+                <p>VS</p>
+                <h4>Eagles: 31</h4>
+            </div>
+            <div class="matchups">
+                <h4>49ers: 17</h4>
+                <p>VS</p>
+                <h4>Vikings: 22</h4>
+            </div>
+        </div>
+
+        <div class="week" id="week8">
+            <h2>Week 8</h2>
+            <div class="matchups">
+                <h4>Buccaneers: 18</h4>
+                <p>VS</p>
+                <h4>Bills: 24</h4>
+            </div>
+            <div class="matchups">
+                <h4>Jets: 13</h4>
+                <p>VS</p>
+                <h4>Giants: 10</h4>
+            </div>
+            <div class="matchups">
+                <h4>Jaguars: 20</h4>
+                <p>VS</p>
+                <h4>Steelers: 10</h4>
+            </div>
+            <div class="matchups">
+                <h4>Eagles: 38</h4>
+                <p>VS</p>
+                <h4>Commanders: 31</h4>
+            </div>
+            <div class="matchups">
+                <h4>Rams: 20</h4>
+                <p>VS</p>
+                <h4>Cowboys: 43</h4>
+            </div>
+            <div class="matchups">
+                <h4>Vikings: 24</h4>
+                <p>VS</p>
+                <h4>Packers: 10</h4>
+            </div>
+            <div class="matchups">
+                <h4>Falcons: 23</h4>
+                <p>VS</p>
+                <h4>Titans: 28</h4>
+            </div>
+            <div class="matchups">
+                <h4>Patriots: 17</h4>
+                <p>VS</p>
+                <h4>Dolphins: 31</h4>
+            </div>
+            <div class="matchups">
+                <h4>Saints: 38</h4>
+                <p>VS</p>
+                <h4>Colts: 27</h4>
+            </div>
+            <div class="matchups">
+                <h4>Texans: 13</h4>
+                <p>VS</p>
+                <h4>Panthers: 15</h4>
+            </div>
+            <div class="matchups">
+                <h4>Browns: 20</h4>
+                <p>VS</p>
+                <h4>Seahawks: 24</h4>
+            </div>
+            <div class="matchups">
+                <h4>Bengals: 31</h4>
+                <p>VS</p>
+                <h4>49ers: 17</h4>
+            </div>
+            <div class="matchups">
+                <h4>Chiefs: 9</h4>
+                <p>VS</p>
+                <h4>Broncos: 24</h4>
+            </div>
+            <div class="matchups">
+                <h4>Ravens: 31</h4>
+                <p>VS</p>
+                <h4>Cardinals: 24</h4>
+            </div>
+            <div class="matchups">
+                <h4>Bears: 13</h4>
+                <p>VS</p>
+                <h4>Chargers: 30</h4>
+            </div>
+            <div class="matchups">
+                <h4>Raiders: 14</h4>
+                <p>VS</p>
+                <h4>Lions: 26</h4>
+            </div>
+        </div>
+
+        <div class="week" id="week9">
+            <h2>Week 9</h2>
+            <div class="matchups">
+                <h4>Titans: 16</h4>
+                <p>VS</p>
+                <h4>Steelers: 20</h4>
+            </div>
+            <div class="matchups">
+                <h4>Dolphins: 14</h4>
+                <p>VS</p>
+                <h4>Chiefs: 21</h4>
+            </div>
+            <div class="matchups">
+                <h4>Vikings: 31</h4>
+                <p>VS</p>
+                <h4>Falcons: 28</h4>
+            </div>
+            <div class="matchups">
+                <h4>Bears: 17</h4>
+                <p>VS</p>
+                <h4>Saints: 24</h4>
+            </div>
+            <div class="matchups">
+                <h4>Rams: 3</h4>
+                <p>VS</p>
+                <h4>Packers: 20</h4>
+            </div>
+            <div class="matchups">
+                <h4>Commanders: 20</h4>
+                <p>VS</p>
+                <h4>Patriots: 17</h4>
+            </div>
+            <div class="matchups">
+                <h4>Seahawks: 3</h4>
+                <p>VS</p>
+                <h4>Ravens: 37</h4>
+            </div>
+            <div class="matchups">
+                <h4>Buccaneers: 37</h4>
+                <p>VS</p>
+                <h4>Texans: 39</h4>
+            </div>
+            <div class="matchups">
+                <h4>Cardinals: 0</h4>
+                <p>VS</p>
+                <h4>Browns: 27</h4>
+            </div>
+            <div class="matchups">
+                <h4>Colts: 27</h4>
+                <p>VS</p>
+                <h4>Panthers: 13</h4>
+            </div>
+            <div class="matchups">
+                <h4>Giants: 6</h4>
+                <p>VS</p>
+                <h4>Raiders: 30</h4>
+            </div>
+            <div class="matchups">
+                <h4>Cowboys: 23</h4>
+                <p>VS</p>
+                <h4>Eagles: 28</h4>
+            </div>
+            <div class="matchups">
+                <h4>Bills: 18</h4>
+                <p>VS</p>
+                <h4>Bengals: 24</h4>
+            </div>
+            <div class="matchups">
+                <h4>Chargers: 27</h4>
+                <p>VS</p>
+                <h4>Jets: 6</h4>
+            </div>
+        </div>
+
+        <div class="week" id="week10">
+            <h2>Week 10</h2>
+            <div class="matchups">
+                <h4>Panthers: 13</h4>
+                <p>VS</p>
+                <h4>Bears: 16</h4>
+            </div>
+            <div class="matchups">
+                <h4>Colts: 10</h4>
+                <p>VS</p>
+                <h4>Patriots: 6</h4>
+            </div>
+            <div class="matchups">
+                <h4>Browns: 33</h4>
+                <p>VS</p>
+                <h4>Ravens: 31</h4>
+            </div>
+            <div class="matchups">
+                <h4>Packers: 19</h4>
+                <p>VS</p>
+                <h4>Steelers: 23</h4>
+            </div>
+            <div class="matchups">
+                <h4>49ers: 34</h4>
+                <p>VS</p>
+                <h4>Jaguars: 3</h4>
+            </div>
+            <div class="matchups">
+                <h4>Saints: 19</h4>
+                <p>VS</p>
+                <h4>Vikings: 27</h4>
+            </div>
+            <div class="matchups">
+                <h4>Texans: 30</h4>
+                <p>VS</p>
+                <h4>Bengals: 27</h4>
+            </div>
+            <div class="matchups">
+                <h4>Titans: 6</h4>
+                <p>VS</p>
+                <h4>Buccaneers: 20</h4>
+            </div>
+            <div class="matchups">
+                <h4>Lions: 41</h4>
+                <p>VS</p>
+                <h4>Chargers: 38</h4>
+            </div>
+            <div class="matchups">
+                <h4>Falcons: 23</h4>
+                <p>VS</p>
+                <h4>Cardinals: 25</h4>
+            </div>
+            <div class="matchups">
+                <h4>Giants: 17</h4>
+                <p>VS</p>
+                <h4>Cowboys: 49</h4>
+            </div>
+            <div class="matchups">
+                <h4>Commanders: 26</h4>
+                <p>VS</p>
+                <h4>Seahawks: 29</h4>
+            </div>
+            <div class="matchups">
+                <h4>Jets: 12</h4>
+                <p>VS</p>
+                <h4>Raiders: 16</h4>
+            </div>
+            <div class="matchups">
+                <h4>Broncos: 24</h4>
+                <p>VS</p>
+                <h4>Bills: 22</h4>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        function showWeek(weekInfo) {
+            console.log(weekInfo);
+            console.log(weekInfo.value);
+
+            const week = document.querySelectorAll('.week');
+
+            // hide all by default
+            week.forEach(hideAll);
+            function hideAll(weekitem){
+                weekitem.classList.add('week-none');
+            }
+
+            // show all if ALL is selected
+            if(weekInfo.value == 'all') {
+                week.forEach(showAll);
+                function showAll(weekitem) {
+                    weekitem.classList.remove('week-none');
+                }
+            };
+
+            if(weekInfo.value !== 'none') {
+                document.getElementById(weekInfo.value).classList.remove('week-none')
+            };
+
+        }
+    </script>
+</body>
+</html>

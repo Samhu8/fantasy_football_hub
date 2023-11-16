@@ -1,0 +1,48 @@
+body {
+    margin: 0px auto;
+    padding: 0px;
+}
+
+/* ************ MENU BAR ************ */
+
+.menu {
+    background-color: rgb(51, 51, 51);
+    height: 50px;
+    line-height: 50px;
+    text-align: end;
+    padding-right: 50px;
+}
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+/* ************ SHARE YOUR THOUGHTS SECTION ************ */
+
+h2{
+    text-align: center;
+}
+.thoughts{
+    margin-left: 25px;
+}
+.comment_org {
+    border: 2px solid black;
+    width: 60%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.comment_details{
+    display: flex;
+    gap: 50px;
+    border-bottom: 2px solid black;
+    height: 45px;
+    background-color: grey;
+    color: whitesmoke;
+    width: 100%;
+}
+.comment{
+    width: 100%;
+    height: 40px;
+}
+

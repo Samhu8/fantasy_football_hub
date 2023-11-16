@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Player</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='player.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='pictures/new_player_img.jpg') }}">
+        <div class="new_player">
+            <div class="info">
+                <h2>Add New Player</h2>
+                <h3>Logged in: {{person.first_name}}</h3>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p style="color: red;">{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <form action="/new_player" method="POST">
+                    <div class="player_info">
+                        <input type="hidden" name="user_id">
+                        <label for="position">Position: </label>
+                        <input type="text" name="position">
+                    </div>
+                    <div class="player_info">
+                        <label for="first_name">First Name: </label>
+                        <input type="text" name="first_name">
+                    </div>
+                    <div class="player_info">
+                        <label for="last_name">Last Name: </label>
+                        <input type="text" name="last_name">
+                    </div>
+                    <div class="player_info">
+                        <label for="team">Team: </label>
+                        <input type="text" name="team">
+                    </div>
+                    <div class="player_info">
+                        <label for="comments">Comments: </label>
+                        <textarea name="comments" id="" cols="21" rows="4"></textarea>
+                    </div>
+                    <div class="btns">
+                        <input type="submit" value="Add Player">
+                        <button><a href="/login" id="btn">Cancel</a></button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

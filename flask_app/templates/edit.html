@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Player</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='edit.css') }}">
+</head>
+<body>
+    <div class="menu_bar">
+        <a href="/login" class="menu">Back to Dashboard |</a>
+        <a href="/logout" class="menu">Logout</a>
+    </div>
+    <div class="info">
+        <h2>Edit Player</h2>
+        <form action="/edit/{{ player.id }}" method="POST">
+            <div class="player_info">
+                <input type="hidden" name="user_id">
+                <label for="position">Position: </label>
+                <input type="text" name="position" value="{{ player.position }}">
+            </div>
+            <div class="player_info">
+                <label for="first_name">First Name: </label>
+                <input type="text" name="first_name" value="{{ player.first_name }}">
+            </div>
+            <div class="player_info">
+                <label for="last_name">Last Name: </label>
+                <input type="text" name="last_name" value="{{ player.last_name }}">
+            </div>
+            <div class="player_info">
+                <label for="team">Team: </label>
+                <input type="text" name="team" value="{{ player.team }}">
+            </div>
+            <div class="player_info">
+                <label for="comments">Comments: </label>
+                <textarea name="comments" id="" cols="20" rows="3">{{ player.comments }}</textarea>
+            </div>
+            <div class="btns">
+                <input type="submit" value="Edit Player">
+                <button><a href="/login" id="btn">Cancel</a></button>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>

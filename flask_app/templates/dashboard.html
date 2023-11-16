@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <div class="main_top">
+        <a href="/new_player" class="menu">Add Player |</a>
+        <a href="/comments" class="menu">Comments |</a>
+        <a href="/games" class="menu">Games |</a>
+        <a href="/logout" class="menu">Logout</a>
+    </div>
+    <div class="container">
+        <img src="{{ url_for('static', filename='pictures/dashboard_football_background.jpg') }}">
+        <div class="player_table">
+            <h1>Welcome, {{user.first_name}}</h1>
+            <h4>Your Favorite Players</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Team</th>
+                        <th>Comments</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for player in players %}
+                        {% if player.user_id == session["user_id"] %}
+                            <tr>
+                                <td>{{ player.position }}</td>
+                                <td>{{ player.first_name }}</td>
+                                <td>{{ player.last_name }}</td>
+                                <td>{{ player.team }}</td>
+                                <td>{{ player.comments }}</td>
+                                <td><a href="/edit/{{ player.id }}">Edit</a> | <a href="/delete/{{ player.id }}">Delete</a></td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+            <h4>Other's Favorites</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Team</th>
+                        <th>Comments</th>
+                        <th>User</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for player in players %}
+                        {% if player.user_id != session["user_id"] %}
+                        <tr>
+                            <td>{{ player.position }}</td>
+                            <td>{{ player.first_name }}</td>
+                            <td>{{ player.last_name }}</td>
+                            <td>{{ player.team }}</td>
+                            <td>{{ player.comments }}</td>
+                            <td> {{ player.user.first_name }}</td>
+                        </tr>
+                        {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>

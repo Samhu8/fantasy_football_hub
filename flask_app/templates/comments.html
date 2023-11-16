@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='comments.css') }}">
+</head>
+<body>
+    <div class="menu">
+        <a href="/login">Back to Dashboard   |</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <div class="thoughts">
+        <h1>Share Your Thougts!</h1>
+        <form action="/comments" class="cmt" method="POST">
+            <input type="hidden" name="user_id">
+                <label for="comments" id="cmt_label">What's on your mind, {{user.first_name}}: </label><br>
+                <textarea name="comments" id="" cols="50" rows="10"></textarea><br>
+                <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <h2>Comments: </h2>
+    {% for comment in all_comments %}
+
+    <div class="comment_org">
+        <div class="comment_details">
+            <h4>Name: {{comment.user.first_name}}</h4>
+            <h4>Date: {{comment.created_at}}</h4>
+        </div>
+        <div class="comment">
+            <p>{{comment.comments}}</p>
+
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Written on</th>
+                <th>Comment</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for comment in all_comments %}
+                <tr>
+                    <td>{{ comment.user.first_name}}</td>
+                    <td>{{ comment.created_at}}</td>
+                    <td>{{ comment.comments}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table> -->
+
+</body>
+</html>

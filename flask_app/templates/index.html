@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="image_container">
+        <img src="{{ url_for('static', filename='pictures/football_field.jpg') }}">
+    </div>
+    <div class="overlay_text">
+        <h1>Fantasy Football Page</h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p style="color: red;">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        <div class="reg_log">
+            <div class="register">
+                <h3>Register</h3>
+                <form action="/register" method="POST">
+                    <div class="user_reg">
+                        <label for="first_name">First Name: </label>
+                        <input type="text" name="first_name">
+                    </div>
+                    <div class="user_reg">
+                        <label for="last_name">Last Name: </label>
+                        <input type="text" name="last_name">
+                    </div>
+                    <div class="user_reg">
+                        <label for="email">Email: </label>
+                        <input type="text" name="email">
+                    </div>
+                    <div class="user_reg">
+                        <label for="password">Password </label>
+                        <input type="password" name="password">
+                    </div>
+                    <div class="user_reg">
+                        <label for="confirm_password">Confirm Pwd: </label>
+                        <input type="password" name="confirm_password">
+                    </div>
+                    <input type="submit" value="Register" class="btn">
+                </form>
+            </div>
+            <div class="login">
+                <form action="/login" method="POST">
+                    <h3>Login</h3>
+                    <div class="user_login">
+                        <label for="email">Email: </label>
+                        <input type="text" name="email">
+                    </div>
+                    <div class="user_login">
+                        <label for="password">Password: </label>
+                        <input type="password" name="password">
+                    </div>
+                    <input type="submit" value="Login" class="btn">
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
